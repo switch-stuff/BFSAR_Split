@@ -20,7 +20,7 @@ namespace BFSAR_Split
                 Directory.CreateDirectory($@"{args[0]}_Extracted");
                 try
                 {
-                    foreach (int Block in Enumerable.Range(0, (int)Reader.BaseStream.Length / 4))
+                    while (true)
                     {
                         int TryRdMagic = Reader.ReadInt32();
 
